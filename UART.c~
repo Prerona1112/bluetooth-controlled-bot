@@ -1,0 +1,33 @@
+#include<mega16.h>
+#include<delay.h>
+void uart_init()
+{
+UCSRA=0b00000000;
+UCSRB=0b00011000;
+UCSRC=0b10000110;
+UBRRH=0;
+UBRRL=51;
+}
+void uart_tx(char t)
+{
+UDR=t;
+while((UCSRA&0b01000000)==0); 
+}
+char uart_rx()
+{
+while((UCSRA&0b10000000)==0);
+return UDR;
+}
+char c1;
+void main()
+{
+uart_init();                                
+PORTD=0x00;
+DDRD=0x01;
+while(1)
+{
+c1=uart_rx();
+delay_ms(200);
+uart_tx(c1+1);
+}
+}

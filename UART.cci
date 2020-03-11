@@ -1,0 +1,8 @@
+VERSION:3 SOURCE_TIMESTAMP:4E369F48
+NODE:I LEVEL:0 LINE:1 "C:\cvavreval\inc\mega16.h"
+NODE:I LEVEL:0 LINE:2 "C:\cvavreval\inc\delay.h"
+NODE:F LEVEL:0 LINE:3 "uart_init(void)"
+NODE:F LEVEL:0 LINE:11 "uart_tx(unsigned char t)"
+NODE:F LEVEL:0 LINE:16 "uart_rx(void)"
+NODE:V LEVEL:0 LINE:21 "c1 -> R5"
+NODE:F LEVEL:0 LINE:22 "main(void)"
